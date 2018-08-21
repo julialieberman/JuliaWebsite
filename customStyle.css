@@ -1,0 +1,56 @@
+#wrapper{
+  text-decoration: underline;
+  width:inherit;
+
+}
+#page{
+  height: 100%;
+  width: 100%;
+}
+#pageHeader{
+  background: #adfbff;
+  padding-bottom: 5px;
+}
+#navbar{
+  width:inherit;
+  height:inherit;
+  text-decoration: none;
+  padding: 5px;
+  display: inline-block;
+
+}
+
+.mySlides{
+  display:none;
+  width:100%;
+  height:inherit;
+}
+.photoSlideHeader{
+  padding: 10px;
+  width: 80%;
+}
+.navItem{
+  width: 100px;
+  font-size:
+}
+
+.aboutMe{
+    padding-left: 15px;
+}
+
+li{
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li a:hover:not(.active){
+  background-color: inherit;
+}
+.active{
+  background-color: #959a9a;
+}
