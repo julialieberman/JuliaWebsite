@@ -5556,7 +5556,7 @@ a.close.disabled {
   flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #fff;
+  background-color: black;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
@@ -5602,6 +5602,7 @@ a.close.disabled {
   position: relative;
   flex: 1 1 auto;
   padding: 1rem;
+  height: 60vw;
 }
 
 .modal-footer {
@@ -5628,7 +5629,7 @@ a.close.disabled {
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 90%;
     margin: 1.75rem auto;
   }
 
@@ -5647,7 +5648,7 @@ a.close.disabled {
   }
 
   .modal-sm {
-    max-width: 300px;
+    max-width: 90%;
   }
 }
 @media (min-width: 992px) {
@@ -5908,6 +5909,7 @@ a.close.disabled {
 
 .carousel {
   position: relative;
+  height: inherit;
 }
 
 .carousel.pointer-event {
@@ -5918,7 +5920,7 @@ a.close.disabled {
   position: relative;
   width: 100%;
   overflow: hidden;
-  max-height: inherit;
+  height: inherit;
 }
 .carousel-inner::after {
   display: block;
@@ -5929,8 +5931,8 @@ a.close.disabled {
 .carousel-item {
   position: relative;
   display: none;
-  float: left;
-  width: 100%;
+  width: inherit;
+  height: inherit;
   margin-right: -100%;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;

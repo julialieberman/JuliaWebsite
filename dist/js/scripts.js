@@ -1,12 +1,15 @@
 /*!
-Julia Lieberman CS169 project
+Julia Lieberman website
     * Start Bootstrap - Creative v6.0.1 (https://startbootstrap.com/themes/creative)
     * Copyright 2013-2020 Start Bootstrap
     * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
     */
-    (function($) {
-  "use strict"; // Start of use strict
 
+
+const BASEIMAGEPATH = "../dist/assets/img/";
+
+(function($) {
+  "use strict";
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -45,20 +48,64 @@ Julia Lieberman CS169 project
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-  // Magnific popup calls
-  $('#portfolio').magnificPopup({
-    delegate: 'a',
-    type: 'image',
-    tLoading: 'Loading image #%curr%...',
-    mainClass: 'mfp-img-mobile',
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1]
-    },
-    image: {
-      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-    }
-  });
-
 })(jQuery); // End of use strict
+
+function populateModal(modalID)
+{
+  let filePath=BASEIMAGEPATH;
+  let totalImages=0;
+  let fileName="";
+  switch(modalID){
+    case "futaleufu":
+      filePath+="patagucciWatermark/";
+      totalImages=25;
+      fileName="finalpatagucci";
+      break;
+    case "astro":
+      filePath+="stars/";
+      totalImages=24;
+      fileName="stars";
+      break;
+    case "lucy":
+      filePath+="portraitsWatermark/lucy/";
+      totalImages=14;
+      fileName="lucy";
+      break;
+    case "maria":
+      filePath+="portraitsWatermark/maria/";
+      totalImages=7;
+      fileName="maria";
+      break;
+    case "sadie":
+        filePath+="portraitsWatermark/sadie/";
+        totalImages=20;
+        fileName="sadie";
+        break;
+    case "landscape":
+      filePath+="landscape/";
+      totalImages=25;
+      fileName="landscape";
+      break;
+    case "random":
+      filePath+="random/";
+      totalImages=15;
+      fileName="random";
+      break;
+    default:
+      break;
+  }
+
+  populateModalHelper(filePath, fileName, totalImages);
+}
+
+function populateModalHelper(filePath, fileName, totalImages)
+{
+  if(totalImages<=1) return;
+  var list=document.getElementById("myGalleryContent");
+  list.innerHTML="";
+  list.innerHTML+="<div class=\"carousel-item active\"> <img class = \"d-block w-100\" src=\""+filePath+fileName+"-1.jpg\" alt=\"item0\"></div>";
+  for(i=2; i<=totalImages; i++)
+  {
+    list.innerHTML+="<div class=\"carousel-item\"> <img class = \"d-block w-100\" src=\""+filePath+fileName+"-"+i+".jpg\" alt=\"item"+(i-1)+"\"></div>"
+  }
+}
