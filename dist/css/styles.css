@@ -5553,8 +5553,10 @@ a.close.disabled {
 .modal-content {
   position: relative;
   display: flex;
+  height: 90%;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
+  margin: auto;
   pointer-events: auto;
   background-color: black;
   background-clip: padding-box;
@@ -10193,7 +10195,7 @@ header.masthead h1 {
 }
 #portfolio .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box {
   position: relative;
-  display: block;
+  display: flex;
 }
 #portfolio .container-fluid .portfolio-box .portfolio-box-caption, #portfolio .container-sm .portfolio-box .portfolio-box-caption, #portfolio .container-md .portfolio-box .portfolio-box-caption, #portfolio .container-lg .portfolio-box .portfolio-box-caption, #portfolio .container-xl .portfolio-box .portfolio-box-caption {
   display: flex;
